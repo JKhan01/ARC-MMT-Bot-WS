@@ -28,3 +28,25 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: flight_booking
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: source
+  - slot_was_set:
+    - source: Mumbai
+  - slot_was_set:
+    - source: Mumbai
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: Delhi
+  - slot_was_set:
+    - destination: Delhi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit

@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +36,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +61,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,10 +77,67 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: flight_booking
+  examples: |
+    - I want to book a flight
+    - book a flight for me
+    - i wanna book a flight
+    - i want to get a plane ticket
+    - buy a plane ticket for me
+    - book a plane ticket
+    - i need to book a flight for my travel
+    - i would like you to book a flight ticket for me
+    - i need to travel so i want you to buy a plane ticket
+    - buy a plane ticket for my travel
+    - would you book a ticket for me
+    - would you make a reservation for my flight travel
+    - i want to book a flight ticket
+- intent: source
+  examples: |
+    - i want to board the flight from [Delhi](source)
+    - my source is [Mumbai](source)
+    - the location from which i will board the flight is [pune](source)
+    - i have to catch the plane from [Bangalore](source)
+    - [Barcelona](source)
+    - [madrid](source)
+    - [Srinagar](source)
+    - i have to get on the plane at [Kolkata](source)
+    - I have to board the flight from [mumbai](source)
+    - the source location of my flight travel is [Bombay](source)
+    - the source location of my travel is [Patna](source)
+    - I want to get on the plane in [Ahmedabad](source)
+    - [barcelona](source) is my source location
+    - [Munich](source) is my source
+    - [Manchester](source) is where I will board the plane from
+    - [Mumbai](source) is my source location
+- intent: destination
+  examples: |
+    - I want to travel to [Mumbai](destination)
+    - my destination is [Delhi](destination)
+    - the destination for my travel is [Kolkata](destination)
+    - flght travel destination is [Manchester](destination)
+    - [Patna](destination)
+    - [Barcelona](destination)
+    - [Kolkata](destination)
+    - i wanna get off the plane at [Munich](destination)
+    - i wanna travel to [pune](destination)
+    - i would like [Delhi](destination) to be the destination of my travel
+    - i would like to take a vacation to [mumbai](destination)
+    - [Delhi](destination) is my destination
+- intent: source_&_destination
+  examples: |
+    - i want to travel from [Mumbai](source) to [Delhi](destination)
+    - the source location and destination are [](source) and [](destination) respectively
+    - i have to go from [pune](source) to [Patna](destination)
+    - source is [Delhi](source) and destination is [Munich](destination)
+    - for my flight travel, the source is [Srinagar](source) and the destination is [](destination)
+    - book a flight for my from [Kolkata](source) to [pune](destination)
+    - [Munich](source) & [Barcelona](destination)
+    - [Barcelona](source) and [madrid](destination) are my source and destination
+    - [madrid](source) and [Mumbai](destination) are the locations between which i want to travel

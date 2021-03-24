@@ -11,3 +11,22 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Activate form
+  steps:
+  - intent: flight_booking
+  - action: details_form
+  - active_loop: details_form
+
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: details_form
+  steps:
+  # Form is deactivated
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_submit
