@@ -1,6 +1,31 @@
 version: "2.0"
 
 stories:
+- story: greet_path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: flight_booking
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: source
+  - slot_was_set:
+    - source: Bangalore
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: Mumbai
+  - slot_was_set:
+    - requested_slot: date_travel
+  - slot_was_set:
+    - date_travel: 30/03/2021
+  - slot_was_set:
+    - requested_slot: trip_type
+  - slot_was_set:
+    - trip_type: Round
+  
+
 - story: interactive_story_1
   steps:
   - intent: flight_booking
@@ -22,3 +47,40 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: action_submit
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: flight_booking
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: source
+  - slot_was_set:
+    - source: Delhi
+  - slot_was_set:
+    - source: Delhi
+  - slot_was_set:
+    - requested_slot: destination
+  - slot_was_set:
+    - destination: Mumbai
+  - slot_was_set:
+    - destination: Mumbai
+  - slot_was_set:
+    - requested_slot: date_travel
+  - slot_was_set:
+    - date_travel: 31/03/2021
+  - slot_was_set:
+    - date_travel: 31/03/2021
+  - slot_was_set:
+    - requested_slot: trip_type
+  - slot_was_set:
+    - trip_type: One Way
+  - slot_was_set:
+    - trip_type: One Way
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - intent: stop

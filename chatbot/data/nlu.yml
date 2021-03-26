@@ -45,7 +45,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -53,7 +52,6 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
     - who the fuck are you?
-
 - intent: flight_booking
   examples: |
     - I want to book a flight
@@ -71,7 +69,7 @@ nlu:
     - i want to book a flight ticket
     - i want to travel from [Mumbai](source) to [Delhi](destination)
     - I am in search of a flight from [Kolkata](source) to [pune](destination)
-
+    - I am planning to book a flight
 - intent: source_entry
   examples: |
     - i want to board the flight from [Delhi](source)
@@ -87,8 +85,8 @@ nlu:
     - [Munich](source) is my source
     - [Manchester](source) is where I will board the plane from
     - [Mumbai](source) is my source location
-
-
+    - The source destination is [Bangalore](source)
+    - [Delhi](source) is my source location
 - intent: destination_entry
   examples: |
     - I want to travel to [Mumbai](destination)
@@ -100,8 +98,8 @@ nlu:
     - i would like [Delhi](destination) to be the destination of my travel
     - i would like to take a vacation to [mumbai](destination)
     - [Delhi](destination) is my destination
-
-
+    - [Mumbai](source) is my destination
+    - [Mumbai](destination)
 - intent: source_&_destination
   examples: |
     - the source location and destination are [](source) and [](destination) respectively
@@ -111,8 +109,6 @@ nlu:
     - [Munich](source) & [Barcelona](destination)
     - [Barcelona](source) and [madrid](destination) are my source and destination
     - [madrid](source) and [Mumbai](destination) are the locations between which i want to travel
-
-
 - intent: date_travel
   examples: |
     - the date for my travel is [27/05/2021](date_travel)
@@ -122,7 +118,7 @@ nlu:
     - the date on which i will be travelling is [09/06/2023](date_travel)
     - [12/08/2021](date_travel) is the date for my travel
     - [16/11/2021](date_travel) is the date on which i will be travelling
-
+    - [31/03/2021](date_travel)
 - intent: trip_type
   examples: |
     - It is a [one way](trip_type) trip
@@ -138,16 +134,7 @@ nlu:
     - i will be travelling [round](trip_type)
     - [round](trip_type)
     - i am planning for a [round](trip_type)
-    - it will be a [round](trip_type)
-
-
-# - [Patna](destination)
-# - [Barcelona](destination)
-# - [Kolkata](destination)
-# - [Barcelona](source)
-# - [madrid](source)
-# - [Srinagar](source)
-
+    - [One Way](trip_type)
 - lookup: source
   examples: |
     - Mumbai
@@ -166,3 +153,29 @@ nlu:
     - pune
     - Aurangabad
     - aurangabad
+    - Bangalore
+    - bangalore
+    - Ahmedabad
+    - ahmedabad
+- lookup: destination
+  examples: |
+    - Mumbai
+    - mumbai
+    - Delhi
+    - delhi
+    - Kolkata
+    - kolkata
+    - Patna
+    - patna
+    - Chennai
+    - chennai
+    - Srinagar
+    - srinagar
+    - Pune
+    - pune
+    - Aurangabad
+    - aurangabad
+    - Bangalore
+    - bangalore
+    - Ahmedabad
+    - ahmedabad

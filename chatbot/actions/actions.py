@@ -28,7 +28,7 @@ from rasa_sdk.executor import CollectingDispatcher
 #         return []
 
 
-class ValidateRestaurantForm(Action):
+class ValidateDetailsForm(Action):
     def name(self) -> Text:
         return "details_form"
 

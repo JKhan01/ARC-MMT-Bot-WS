@@ -3,11 +3,18 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
 intents:
-- source:
+- trip_type:
+    use_entities:
+    - trip_type
+- flight_booking
+- stop
+- date_travel:
+    use_entities:
+    - date_travel
+- source_entry:
     use_entities:
     - source
-- flight_booking
-- destination:
+- destination_entry:
     use_entities:
     - destination
 - greet
@@ -17,18 +24,12 @@ intents:
 - bot_challenge
 - source_&_destination:
     use_entities:
-    - source
     - destination
-- date_travel:
-    use_entities:
-    - date_travel
-- trip_type:
-    use_entities:
-    - trip_type
+    - source
 entities:
+- date_travel
 - destination
 - source
-- date_travel
 - trip_type
 slots:
   source:
@@ -46,6 +47,8 @@ slots:
 responses:
   utter_greet:
   - text: Hey! How are you?
+  utter_default:
+  - text: Sorry I wasn't able to interpret your message
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -72,14 +75,17 @@ responses:
       Destination: {destination}
 actions:
 - action_submit
+- utter_greet
 forms:
   details_form:
     source:
-    - type: from_text
+    - type: from_entity
+      entity: source
       intent: source_entry
-      not_intent: destination_entry 
+      not_intent: destination_entry
     destination:
-    - type: from_text
+    - type: from_entity
+      entity: destination
       intent: destination_entry
       not_intent: source_entry
     date_travel:
