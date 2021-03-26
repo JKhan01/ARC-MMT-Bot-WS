@@ -45,44 +45,15 @@ nlu:
     - don't like that
     - no way
     - not really
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - who the fuck are you?
+
 - intent: flight_booking
   examples: |
     - I want to book a flight
@@ -98,15 +69,15 @@ nlu:
     - would you book a ticket for me
     - would you make a reservation for my flight travel
     - i want to book a flight ticket
-- intent: source
+    - i want to travel from [Mumbai](source) to [Delhi](destination)
+    - I am in search of a flight from [Kolkata](source) to [pune](destination)
+
+- intent: source_entry
   examples: |
     - i want to board the flight from [Delhi](source)
     - my source is [Mumbai](source)
     - the location from which i will board the flight is [pune](source)
     - i have to catch the plane from [Bangalore](source)
-    - [Barcelona](source)
-    - [madrid](source)
-    - [Srinagar](source)
     - i have to get on the plane at [Kolkata](source)
     - I have to board the flight from [mumbai](source)
     - the source location of my flight travel is [Bombay](source)
@@ -116,28 +87,54 @@ nlu:
     - [Munich](source) is my source
     - [Manchester](source) is where I will board the plane from
     - [Mumbai](source) is my source location
-- intent: destination
+
+
+- intent: destination_entry
   examples: |
     - I want to travel to [Mumbai](destination)
     - my destination is [Delhi](destination)
     - the destination for my travel is [Kolkata](destination)
     - flght travel destination is [Manchester](destination)
-    - [Patna](destination)
-    - [Barcelona](destination)
-    - [Kolkata](destination)
     - i wanna get off the plane at [Munich](destination)
     - i wanna travel to [pune](destination)
     - i would like [Delhi](destination) to be the destination of my travel
     - i would like to take a vacation to [mumbai](destination)
     - [Delhi](destination) is my destination
+
+
 - intent: source_&_destination
   examples: |
-    - i want to travel from [Mumbai](source) to [Delhi](destination)
     - the source location and destination are [](source) and [](destination) respectively
     - i have to go from [pune](source) to [Patna](destination)
     - source is [Delhi](source) and destination is [Munich](destination)
     - for my flight travel, the source is [Srinagar](source) and the destination is [](destination)
-    - book a flight for my from [Kolkata](source) to [pune](destination)
     - [Munich](source) & [Barcelona](destination)
     - [Barcelona](source) and [madrid](destination) are my source and destination
     - [madrid](source) and [Mumbai](destination) are the locations between which i want to travel
+
+
+# - [Patna](destination)
+# - [Barcelona](destination)
+# - [Kolkata](destination)
+# - [Barcelona](source)
+# - [madrid](source)
+# - [Srinagar](source)
+
+- lookup: source
+  examples: |
+    - Mumbai
+    - mumbai
+    - Delhi
+    - delhi
+    - Kolkata
+    - kolkata
+    - Patna
+    - patna
+    - Chennai
+    - chennai
+    - Srinagar
+    - srinagar
+    - Pune
+    - pune
+    - Aurangabad
+    - aurangabad

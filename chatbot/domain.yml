@@ -1,7 +1,7 @@
 version: '2.0'
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 intents:
 - source:
     use_entities:
@@ -14,13 +14,13 @@ intents:
 - goodbye
 - affirm
 - deny
-- mood_great
-- mood_unhappy
 - bot_challenge
 - source_&_destination
 entities:
 - destination
 - source
+- date_travel
+- trip_type
 slots:
   source:
     type: text
@@ -28,12 +28,15 @@ slots:
   destination:
     type: text
     influence_conversation: true
+  date_travel:
+    type: text
+    influence_conversation: true
+  trip_type:
+    type: text
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hey! How are you?
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
@@ -49,15 +52,23 @@ responses:
   utter_details_thanks:
   - text: |-
       Thanks for providing the given details 
-      Source: {Source},
-      Destination: {Destination}
+      Source: {source},
+      Destination: {destination}
 actions:
 - action_submit
 forms:
   details_form:
     source:
-    - type: from_entity
-      entity: source
+    - type: from_text
+      intent: source_entry
+      not_intent: destination_entry 
     destination:
+    - type: from_text
+      intent: destination_entry
+      not_intent: source_entry
+    date_travel:
     - type: from_entity
-      entity: destination
+      entity: date_travel
+    trip_type:
+    - type: from_entity
+      entity: trip_type
