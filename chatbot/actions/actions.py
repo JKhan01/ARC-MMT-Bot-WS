@@ -35,7 +35,7 @@ class ValidateRestaurantForm(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
-        required_slots = ["source", "destination"]
+        required_slots = ["source", "destination", "date_travel", "trip_type"]
 
         for slot_name in required_slots:
             if tracker.slots.get(slot_name) is None:

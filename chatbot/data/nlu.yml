@@ -107,10 +107,38 @@ nlu:
     - the source location and destination are [](source) and [](destination) respectively
     - i have to go from [pune](source) to [Patna](destination)
     - source is [Delhi](source) and destination is [Munich](destination)
-    - for my flight travel, the source is [Srinagar](source) and the destination is [](destination)
+    - for my flight travel, the source is [Srinagar](source) and the destination is [Delhi](destination)
     - [Munich](source) & [Barcelona](destination)
     - [Barcelona](source) and [madrid](destination) are my source and destination
     - [madrid](source) and [Mumbai](destination) are the locations between which i want to travel
+
+
+- intent: date_travel
+  examples: |
+    - the date for my travel is [27/05/2021](date_travel)
+    - i will be travelling on [23/03/2021](date_travel)
+    - [12/09/2022](date_travel)
+    - [03/12/2021](date_travel)
+    - the date on which i will be travelling is [09/06/2023](date_travel)
+    - [12/08/2021](date_travel) is the date for my travel
+    - [16/11/2021](date_travel) is the date on which i will be travelling
+
+- intent: trip_type
+  examples: |
+    - It is a [one way](trip_type) trip
+    - It is a [round](trip_type) trip
+    - i want a [one way](trip_type) trip
+    - my plan is for a [one way](trip_type)
+    - i will be travelling [one way](trip_type)
+    - [one way](trip_type)
+    - i am planning for a [one way](trip_type)
+    - it will be a [round](trip_type)
+    - i want a [round](trip_type) trip
+    - my plan is for a [round](trip_type)
+    - i will be travelling [round](trip_type)
+    - [round](trip_type)
+    - i am planning for a [round](trip_type)
+    - it will be a [round](trip_type)
 
 
 # - [Patna](destination)

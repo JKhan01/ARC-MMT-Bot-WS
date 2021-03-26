@@ -15,7 +15,16 @@ intents:
 - affirm
 - deny
 - bot_challenge
-- source_&_destination
+- source_&_destination:
+    use_entities:
+    - source
+    - destination
+- date_travel:
+    use_entities:
+    - date_travel
+- trip_type:
+    use_entities:
+    - trip_type
 entities:
 - destination
 - source
@@ -49,6 +58,13 @@ responses:
   - text: What is your source location?
   utter_ask_destination:
   - text: What is your destination?
+  utter_ask_date_travel:
+  - text: What is the date for your travel?
+  utter_ask_trip_type:
+  - text: |-
+      What is the type of your trip? :
+      1. One Way
+      2. Round
   utter_details_thanks:
   - text: |-
       Thanks for providing the given details 
