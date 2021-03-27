@@ -87,6 +87,7 @@ nlu:
     - [Mumbai](source) is my source location
     - The source destination is [Bangalore](source)
     - [Delhi](source) is my source location
+    - [Ahmedabad](source)
 - intent: destination_entry
   examples: |
     - I want to travel to [Mumbai](destination)
@@ -100,6 +101,7 @@ nlu:
     - [Delhi](destination) is my destination
     - [Mumbai](source) is my destination
     - [Mumbai](destination)
+    - [Pune](destination)
 - intent: source_&_destination
   examples: |
     - the source location and destination are [](source) and [](destination) respectively
