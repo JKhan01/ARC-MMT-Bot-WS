@@ -19,7 +19,7 @@ stories:
   - slot_was_set:
     - requested_slot: date_travel
   - slot_was_set:
-    - date_travel: 30/03/2021
+    - date_travel: 30-03-2021
   - slot_was_set:
     - requested_slot: trip_type
   - slot_was_set:
@@ -70,9 +70,9 @@ stories:
   - slot_was_set:
     - requested_slot: date_travel
   - slot_was_set:
-    - date_travel: 31/03/2021
+    - date_travel: 31-03-2021
   - slot_was_set:
-    - date_travel: 31/03/2021
+    - date_travel: 31-03-2021
   - slot_was_set:
     - requested_slot: trip_type
   - slot_was_set:
