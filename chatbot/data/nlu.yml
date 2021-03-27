@@ -99,7 +99,7 @@ nlu:
     - i would like [Delhi](destination) to be the destination of my travel
     - i would like to take a vacation to [mumbai](destination)
     - [Delhi](destination) is my destination
-    - [Mumbai](source) is my destination
+    - [Mumbai](destination) is my destination
     - [Mumbai](destination)
     - [Pune](destination)
 - intent: source_&_destination
