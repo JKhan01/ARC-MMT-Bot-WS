@@ -113,14 +113,14 @@ nlu:
     - [madrid](source) and [Mumbai](destination) are the locations between which i want to travel
 - intent: date_travel
   examples: |
-    - the date for my travel is [27/05/2021](date_travel)
-    - i will be travelling on [23/03/2021](date_travel)
-    - [12/09/2022](date_travel)
-    - [03/12/2021](date_travel)
-    - the date on which i will be travelling is [09/06/2023](date_travel)
-    - [12/08/2021](date_travel) is the date for my travel
-    - [16/11/2021](date_travel) is the date on which i will be travelling
-    - [31/03/2021](date_travel)
+    - the date for my travel is [27-05-2021](date_travel)
+    - i will be travelling on [23-03-2021](date_travel)
+    - [12-09-2022](date_travel)
+    - [03-12-2021](date_travel)
+    - the date on which i will be travelling is [09-06-2023](date_travel)
+    - [12-08-2021](date_travel) is the date for my travel
+    - [16-11-2021](date_travel) is the date on which i will be travelling
+    - [31-03-2021](date_travel)
 - intent: trip_type
   examples: |
     - It is a [one way](trip_type) trip
