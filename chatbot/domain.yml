@@ -62,7 +62,7 @@ responses:
   utter_ask_destination:
   - text: What is your destination?
   utter_ask_date_travel:
-  - text: What is the date for your travel?
+  - text: What is the date for your travel? (dd-mm-yyyy)
   utter_ask_trip_type:
   - text: |-
       What is the type of your trip? :
